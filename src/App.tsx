@@ -89,13 +89,25 @@ export default function App() {
         <div className="absolute inset-0 bg-white/40 backdrop-blur-sm" />
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
           className="relative z-10 px-6"
         >
-          <h1 className="text-5xl md:text-7xl font-light">Grown, Not Built</h1>
-          <p className="mt-6 text-stone-600 max-w-xl mx-auto">
-            O primeiro sofá cultivado a partir de micélio.
+          {/* LOGO + ÍCONE */}
+          <div className="mb-6 flex items-center justify-center gap-2 text-sm tracking-[0.3em] uppercase text-stone-500">
+            <Leaf className="w-4 h-4 text-green-700" />
+            NEMU
+          </div>
+
+          {/* TÍTULO */}
+          <h1 className="text-5xl md:text-7xl font-light leading-tight">
+            Grown, Not Built
+          </h1>
+
+          {/* SUBTEXTO */}
+          <p className="mt-6 text-lg text-stone-600 max-w-xl mx-auto">
+            O primeiro sofá sustentável cultivado a partir de micélio.
           </p>
         </motion.div>
       </section>
